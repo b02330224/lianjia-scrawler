@@ -4,11 +4,9 @@
 + 利用Python Pandas ([source code](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/data/lianjia.ipynb))分析链家在线房源数据，本项目提供了一个例子可以参考。
 + 由于链家的反爬虫机制，所以该项目限制了爬虫速度。
 + 此代码仅供学习与交流，请勿用于商业用途，后果自负。
-+ 下图为利用爬虫数据做的微信小程序
-![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/wechat.png)
-+ 下图为利用爬虫数据做的可视化分析网站。
++ 下图为利用爬虫数据做的微信小程序和可视化分析网站。
 + **如果觉得好，请给项目点颗星来支持吧～～** 
-
+![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/wechat.jpg)
 ![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/homepage_1.png)
 
 ## 使用说明
