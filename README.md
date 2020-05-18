@@ -1,11 +1,13 @@
 # lianjia-scrawler
+[![Licenses](https://img.shields.io/badge/license-bsd-orange.svg)](https://opensource.org/licenses/BSD-3-Clause)
 + 该项目提供一个链家网全国房源爬虫工具，数据存储目前支持Mysql,Sqlite和Postgres。非常方便转化成csv等格式文件。
 + 利用Python Pandas ([source code](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/data/lianjia.ipynb))分析链家在线房源数据，本项目提供了一个例子可以参考。
-+ 由于链家的反爬虫机制，所以该项目限制了爬虫速度。如果被封，可以修改header的cookie信息。
-+ 此网站(www.ershoufangdata.com) 利用该项目爬虫数据提供房价的可视化分析，帮助用户更好的评估房产和预测未来的价格，欢迎使用！
++ 由于链家的反爬虫机制，所以该项目限制了爬虫速度。
++ 此代码仅供学习与交流，请勿用于商业用途，后果自负。
++ 下图为利用爬虫数据做的微信小程序和可视化分析网站。
 + **如果觉得好，请给项目点颗星来支持吧～～** 
-
-![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/homepage.png)
+![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/wechat.jpg)
+![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/homepage_1.png)
 
 ## 使用说明
 + 下载源码并安装依赖包
@@ -47,25 +49,25 @@ regionlist = ['chaoyang', 'haidian'] 目前仅支持拼音
 communitylist = [u'万科星园', u'上地东里']
 
 根据行政区来爬虫小区信息, 返回regionlist里面所有小区信息。
-core.GetCommunityByRegionlist(regionlist)
+core.GetCommunityByRegionlist(city, regionlist)
 
 根据行政区来爬虫在售房源信息， 返回regionlist里面所有在售房源信息。
 由于链家限制，仅支持爬前100页数据，可使用GetHouseByCommunitylist。
-core.GetHouseByRegionlist(regionlist)
+core.GetHouseByRegionlist(city, regionlist)
 
 根据小区来爬虫在售房源房源信息，返回communitylist里面所有在售房源信息。
-core.GetHouseByCommunitylist(communitylist)
+core.GetHouseByCommunitylist(city, communitylist)
 
 根据行政区来爬虫出租房源信息，返回regionlist里面所有出租房源信息。
 由于链家限制，仅支持爬前100页数据，可使用GetRentByCommunitylist。
-core.GetRentByRegionlist(regionlist) 
+core.GetRentByRegionlist(city, regionlist)
 
 根据小区来爬虫出租房源信息，返回communitylist里面所有出租房源信息。
-core.GetRentByCommunitylist(communitylist)
+core.GetRentByCommunitylist(city, communitylist)
 
 根据小区来爬虫成交房源信息，返回communitylist里面所有成交房源信息。
 部分数据无法显示因为这些数据仅在链家app显示
-core.GetSellByCommunitylist(communitylist)
+core.GetSellByCommunitylist(city, communitylist)
 
 
 ```
@@ -86,4 +88,4 @@ woaiwojia.GetSellByCommunitylist()
 ```
 
 ## 更多截图
-![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/community.png)
+![alt text](https://github.com/XuefengHuang/lianjia-scrawler/blob/master/screenshots/community_1.png)
